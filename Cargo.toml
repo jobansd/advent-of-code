@@ -7,7 +7,7 @@ edition = "2024"
 license = "MIT"
 readme = "README.md"
 homepage = "https://www.dhillon.dev/"
-repository = "https://github.com/jobansd/advent-of-code"
+repository = "https://github.com/jobansd/advent-of-code-rs"
 publish = false
 
 [dependencies]

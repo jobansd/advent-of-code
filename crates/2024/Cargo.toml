@@ -1,0 +1,8 @@
+[package]
+name = "aoc-2024"
+version = "0.1.0"
+description = "Solutions to Advent of Code (2024) problems."
+
+[dependencies]
+aoc-common = { path = "../common" }
+colored = "2.1.0"

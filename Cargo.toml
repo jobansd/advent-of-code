@@ -1,0 +1,30 @@
+[package]
+name = "advent-of-code"
+description = "Solutions for the annual Advent of Code challenge."
+version = "0.1.0"
+authors = ["Joban <2983844+jobansd@users.noreply.github.com>"]
+edition = "2024"
+license = "MIT"
+readme = "README.md"
+homepage = "https://www.dhillon.dev/"
+repository = "https://github.com/jobansd/advent-of-code"
+publish = false
+
+[dependencies]
+aoc-2024 = { path = "crates/2024" }
+
+[profile.dev]
+opt-level = 0
+debug = true
+
+[profile.release]
+opt-level = 3
+lto = true
+
+[[bin]]
+name = "aoc-rs"
+path = "src/main.rs"
+
+[workspace]
+resolver = "2"
+members = ["crates/*"]

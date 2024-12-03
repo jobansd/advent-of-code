@@ -77,11 +77,10 @@ fn part_1() {
 fn part_2() {
     let input = parse_input("res/2024/d2.txt");
 
-    let mut unsafe_reports: i32 = 0;
+    let mut safe_reports: i32 = 0;
     let mut dampened_reports: i32 = 0;
     input.iter().for_each(|arr| {
         if !is_valid(arr) {
-            unsafe_reports += 1;
             let mut is_safe = false;
             for possibly_safe_report in generate_variants(arr) {
                 if !is_safe && is_valid(&possibly_safe_report) {
@@ -89,13 +88,16 @@ fn part_2() {
                     dampened_reports += 1;
                 }
             }
+        } else {
+            safe_reports += 1;
         }
     });
 
     println!(
-        "  ‣ {} Safe Reports (Dampened): {}",
+        "  ‣ {} Safe Reports (Dampened): {} {}",
         "Part 2".bright_black().bold(),
-        dampened_reports.to_string().bright_green()
+        (safe_reports + dampened_reports).to_string().bright_green(),
+        format!("({} + {})", safe_reports, dampened_reports).bright_black()
     );
 }
 

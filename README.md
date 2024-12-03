@@ -48,10 +48,10 @@ $ cd advent-of-code
 $ cargo run
 ```
 
-# Contributions
+# 🤝 Contributions
 
-Feel free to fork this repository and improve the solutions.
+Feel free to fork this repository and improve upon the solutions.
 
-# License
+# 📜 License
 
 This repository is licensed under the [MIT License](https://mit-license.org/). See [LICENSE](LICENSE) for more details.
